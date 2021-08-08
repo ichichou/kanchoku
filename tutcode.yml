@@ -1,10 +1,14 @@
-title: "TUT-code"
+title: "09-9. TUT-code"
 
 # ===== Aliases =====
 
 aliases:
 
 # ----- Modifier Keys -----
+
+- from/modifiers: &optional_any
+    optional:
+    - any
 
 - from/modifiers: &optional_shift_key
     optional:
@@ -62,35 +66,9 @@ rules:
 - description: "[Kana Input] TUT-code"
   manipulators:
 
-  # # 漢直モードキー（F16）
-  # - type: basic
-  #   from:
-  #     key_code: f16
-  #     modifiers: *optional_shift_key
-  #   to:
-  #   - set_variable:
-  #       name: kanchoku_mode
-  #       value: 1
-  #   to_delayed_action:
-  #     to_if_invoked:
-  #     - set_variable:
-  #         name: kanchoku_mode
-  #         value: 0
-  #     to_if_canceled:
-  #     - set_variable:
-  #         name: kanchoku_mode
-  #         value: 0
-  #   conditions:
-  #   - type: input_source_if
-  #     input_sources:
-  #     - language: ja
-  #
-  # - type: basic
-  #   from:
-  #     key_code: f16
-  #     modifiers: *optional_shift_key
+# ----- 漢直モードキー（held down） -----
 
-  # 漢直モードキー（Return）
+  # Return
   - type: basic
     from:
       key_code: return_or_enter
@@ -107,17 +85,13 @@ rules:
         value: 0
     conditions: *base_state
 
-  # 英数入力で return をリピートしない
+  # Return: 英数入力モードでリピートしない
   - type: basic
     from:
       key_code: return_or_enter
     to:
     - key_code: return_or_enter
       repeat: false
-    conditions:
-    - type: frontmost_application_unless
-      bundle_identifiers:
-      - "^com\\.apple\\.loginwindow$"
 
 # ----- 1ストローク目 -----
 
@@ -172,3 +146,36 @@ rules:
         name: kanchoku_mode
         value: 1
     conditions: *kanchoku_mode_3
+
+# ----- 漢直モードキー（toggle） -----
+
+  # F16
+  - type: basic
+    from:
+      key_code: f16
+      modifiers: *optional_any
+    to:
+    - set_variable:
+        name: kanchoku_mode
+        value: 1
+    to_delayed_action:
+      to_if_invoked:
+      - set_variable:
+          name: kanchoku_mode
+          value: 0
+      to_if_canceled:
+      - set_variable:
+          name: kanchoku_mode
+          value: 0
+    parameters:
+      basic.to_delayed_action_delay_milliseconds: 5000
+    conditions:
+    - type: input_source_if
+      input_sources:
+      - language: ja
+
+  # F16: 英数入力モードで無効
+  - type: basic
+    from:
+      key_code: f16
+      modifiers: *optional_any
