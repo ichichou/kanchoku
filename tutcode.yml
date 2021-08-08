@@ -1,0 +1,174 @@
+title: "TUT-code"
+
+# ===== Aliases =====
+
+aliases:
+
+# ----- Modifier Keys -----
+
+- from/modifiers: &optional_shift_key
+    optional:
+    - shift
+
+- to/modifiers: &to_shift_key
+  - shift
+
+# ----- Conditions -----
+
+- conditions: &kanchoku_mode_1
+  - type: variable_if
+    name: kanchoku_mode
+    value: 1
+  - type: frontmost_application_unless
+    bundle_identifiers:
+    - "^com\\.apple\\.loginwindow$"
+
+- conditions: &kanchoku_mode_2
+  - type: variable_if
+    name: kanchoku_mode
+    value: 2
+  - type: frontmost_application_unless
+    bundle_identifiers:
+    - "^com\\.apple\\.loginwindow$"
+
+- conditions: &kanchoku_mode_3
+  - type: variable_if
+    name: kanchoku_mode
+    value: 3
+  - type: frontmost_application_unless
+    bundle_identifiers:
+    - "^com\\.apple\\.loginwindow$"
+
+- conditions: &base_state
+  - type: input_source_if
+    input_sources:
+    - language: ja
+  - type: variable_unless
+    name: kanchoku_mode
+    value: 1
+  - type: variable_unless
+    name: kanchoku_mode
+    value: 2
+  - type: variable_unless
+    name: kanchoku_mode
+    value: 3
+  - type: frontmost_application_unless
+    bundle_identifiers:
+    - "^com\\.apple\\.loginwindow$"
+
+# ===== Rules =====
+
+rules:
+- description: "[Kana Input] TUT-code"
+  manipulators:
+
+  # # 漢直モードキー（F16）
+  # - type: basic
+  #   from:
+  #     key_code: f16
+  #     modifiers: *optional_shift_key
+  #   to:
+  #   - set_variable:
+  #       name: kanchoku_mode
+  #       value: 1
+  #   to_delayed_action:
+  #     to_if_invoked:
+  #     - set_variable:
+  #         name: kanchoku_mode
+  #         value: 0
+  #     to_if_canceled:
+  #     - set_variable:
+  #         name: kanchoku_mode
+  #         value: 0
+  #   conditions:
+  #   - type: input_source_if
+  #     input_sources:
+  #     - language: ja
+  #
+  # - type: basic
+  #   from:
+  #     key_code: f16
+  #     modifiers: *optional_shift_key
+
+  # 漢直モードキー（Return）
+  - type: basic
+    from:
+      key_code: return_or_enter
+    to_if_alone:
+    - key_code: return_or_enter
+      repeat: false
+    to:
+    - set_variable:
+        name: kanchoku_mode
+        value: 1
+    to_after_key_up:
+    - set_variable:
+        name: kanchoku_mode
+        value: 0
+    conditions: *base_state
+
+  # 英数入力で return をリピートしない
+  - type: basic
+    from:
+      key_code: return_or_enter
+    to:
+    - key_code: return_or_enter
+      repeat: false
+    conditions:
+    - type: frontmost_application_unless
+      bundle_identifiers:
+      - "^com\\.apple\\.loginwindow$"
+
+# ----- 1ストローク目 -----
+
+  - type: basic
+    from:
+      key_code: g
+    to:
+    - key_code: "3"
+      modifiers: *to_shift_key
+    - key_code: g
+      repeat: false
+    - set_variable:
+        name: kanchoku_mode
+        value: 2
+    conditions: *kanchoku_mode_1
+
+# ----- 2ストローク目（2/2） -----
+
+  - type: basic
+    from:
+      key_code: f
+    to:
+    - key_code: f
+      repeat: false
+    - set_variable:
+        name: kanchoku_mode
+        value: 1
+    conditions: *kanchoku_mode_2
+
+# ----- 2ストローク目（2/3） -----
+
+  - type: basic
+    from:
+      key_code: g
+    to:
+    - key_code: g
+      repeat: false
+    - set_variable:
+        name: kanchoku_mode
+        value: 3
+    conditions: *kanchoku_mode_2
+
+# ----- 3ストローク目 -----
+
+  - type: basic
+    from:
+      key_code: h
+    to:
+    - key_code: h
+      repeat: false
+    - set_variable:
+        name: kanchoku_mode
+        value: 1
+    conditions: *kanchoku_mode_3
