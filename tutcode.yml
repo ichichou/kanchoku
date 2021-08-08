@@ -112,6 +112,108 @@ rules:
 
 # ----- 1ストローク目（右側） -----
 
+  # Y
+  - type: basic
+    from:
+      key_code: "y"
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: "y"
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # U
+  - type: basic
+    from:
+      key_code: u
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: u
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # I
+  - type: basic
+    from:
+      key_code: i
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: i
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # O
+  - type: basic
+    from:
+      key_code: o
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: o
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # P
+  - type: basic
+    from:
+      key_code: p
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: p
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # H
+  - type: basic
+    from:
+      key_code: h
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: h
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
   # J
   - type: basic
     from:
@@ -129,7 +231,279 @@ rules:
         value: 1
     conditions: *waiting_for_first_stroke
 
+  # K
+  - type: basic
+    from:
+      key_code: k
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: k
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # L
+  - type: basic
+    from:
+      key_code: l
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: l
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # Semicolon
+  - type: basic
+    from:
+      key_code: semicolon
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: semicolon
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # N
+  - type: basic
+    from:
+      key_code: "n"
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: "n"
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # M
+  - type: basic
+    from:
+      key_code: m
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: m
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # Comma
+  - type: basic
+    from:
+      key_code: comma
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: comma
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # Period
+  - type: basic
+    from:
+      key_code: period
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: period
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # Slash
+  - type: basic
+    from:
+      key_code: slash
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: slash
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
 # ----- 1ストローク目（左側） -----
+
+  # Q
+  - type: basic
+    from:
+      key_code: q
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: q
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # W
+  - type: basic
+    from:
+      key_code: w
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: w
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # E
+  - type: basic
+    from:
+      key_code: e
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: e
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # R
+  - type: basic
+    from:
+      key_code: r
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: r
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # T
+  - type: basic
+    from:
+      key_code: t
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: t
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # A
+  - type: basic
+    from:
+      key_code: a
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: a
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # S
+  - type: basic
+    from:
+      key_code: s
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: s
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # D
+  - type: basic
+    from:
+      key_code: d
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: d
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
 
   # F
   - type: basic
@@ -139,6 +513,108 @@ rules:
     - key_code: backslash
       modifiers: *to_shift_key
     - key_code: f
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # G
+  - type: basic
+    from:
+      key_code: g
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: g
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # Z
+  - type: basic
+    from:
+      key_code: z
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: z
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # X
+  - type: basic
+    from:
+      key_code: x
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: x
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # C
+  - type: basic
+    from:
+      key_code: c
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: c
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # V
+  - type: basic
+    from:
+      key_code: v
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: v
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 1
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 1
+    conditions: *waiting_for_first_stroke
+
+  # B
+  - type: basic
+    from:
+      key_code: b
+    to:
+    - key_code: backslash
+      modifiers: *to_shift_key
+    - key_code: b
       repeat: false
     - set_variable:
         name: kanchoku_still_typing
@@ -167,6 +643,111 @@ rules:
         value: 0
     conditions: *waiting_for_second_stroke_after_right_side
 
+  # Y
+  - type: basic
+    from:
+      key_code: "y"
+    to:
+    - key_code: "y"
+      repeat: false
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_right_side
+
+  # H
+  - type: basic
+    from:
+      key_code: h
+    to:
+    - key_code: h
+      repeat: false
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_right_side
+
+  # N
+  - type: basic
+    from:
+      key_code: "n"
+    to:
+    - key_code: "n"
+      repeat: false
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_right_side
+
+  # V
+  - type: basic
+    from:
+      key_code: v
+    to:
+    - key_code: v
+      repeat: false
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_left_side
+
+  # T
+  - type: basic
+    from:
+      key_code: t
+    to:
+    - key_code: t
+      repeat: false
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_left_side
+
+  # G
+  - type: basic
+    from:
+      key_code: g
+    to:
+    - key_code: g
+      repeat: false
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_left_side
+
+  # B
+  - type: basic
+    from:
+      key_code: b
+    to:
+    - key_code: b
+      repeat: false
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_left_side
+
 # Final Stroke
 
   # M
@@ -187,7 +768,295 @@ rules:
         value: 0
     conditions: *waiting_for_second_stroke_after_left_side
 
+  # Y
+  - type: basic
+    from:
+      key_code: "y"
+    to:
+    - key_code: "y"
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_left_side
+
+  # H
+  - type: basic
+    from:
+      key_code: h
+    to:
+    - key_code: h
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_left_side
+
+  # N
+  - type: basic
+    from:
+      key_code: "n"
+    to:
+    - key_code: "n"
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_left_side
+
+  # V
+  - type: basic
+    from:
+      key_code: v
+    to:
+    - key_code: v
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_right_side
+
+  # T
+  - type: basic
+    from:
+      key_code: t
+    to:
+    - key_code: t
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_right_side
+
+  # G
+  - type: basic
+    from:
+      key_code: g
+    to:
+    - key_code: g
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_right_side
+
+  # B
+  - type: basic
+    from:
+      key_code: b
+    to:
+    - key_code: b
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_right_side
+
 # ----- 2ストローク目（それ以外）・3ストローク目 -----
+
+  # A
+  - type: basic
+    from:
+      key_code: a
+    to:
+    - key_code: a
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # B
+  - type: basic
+    from:
+      key_code: b
+    to:
+    - key_code: b
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # C
+  - type: basic
+    from:
+      key_code: c
+    to:
+    - key_code: c
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # D
+  - type: basic
+    from:
+      key_code: d
+    to:
+    - key_code: d
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # E
+  - type: basic
+    from:
+      key_code: e
+    to:
+    - key_code: e
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # F
+  - type: basic
+    from:
+      key_code: f
+    to:
+    - key_code: f
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # G
+  - type: basic
+    from:
+      key_code: g
+    to:
+    - key_code: g
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # H
+  - type: basic
+    from:
+      key_code: h
+    to:
+    - key_code: h
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # I
+  - type: basic
+    from:
+      key_code: i
+    to:
+    - key_code: i
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
 
   # J
   - type: basic
@@ -195,6 +1064,366 @@ rules:
       key_code: j
     to:
     - key_code: j
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # K
+  - type: basic
+    from:
+      key_code: k
+    to:
+    - key_code: k
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # L
+  - type: basic
+    from:
+      key_code: l
+    to:
+    - key_code: l
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # M
+  - type: basic
+    from:
+      key_code: m
+    to:
+    - key_code: m
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # N
+  - type: basic
+    from:
+      key_code: "n"
+    to:
+    - key_code: "n"
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # O
+  - type: basic
+    from:
+      key_code: o
+    to:
+    - key_code: o
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # P
+  - type: basic
+    from:
+      key_code: p
+    to:
+    - key_code: p
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # Q
+  - type: basic
+    from:
+      key_code: q
+    to:
+    - key_code: q
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # R
+  - type: basic
+    from:
+      key_code: r
+    to:
+    - key_code: r
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # S
+  - type: basic
+    from:
+      key_code: s
+    to:
+    - key_code: s
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # T
+  - type: basic
+    from:
+      key_code: t
+    to:
+    - key_code: t
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # U
+  - type: basic
+    from:
+      key_code: u
+    to:
+    - key_code: u
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # V
+  - type: basic
+    from:
+      key_code: v
+    to:
+    - key_code: v
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # W
+  - type: basic
+    from:
+      key_code: w
+    to:
+    - key_code: w
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # X
+  - type: basic
+    from:
+      key_code: x
+    to:
+    - key_code: x
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # Y
+  - type: basic
+    from:
+      key_code: "y"
+    to:
+    - key_code: "y"
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # Z
+  - type: basic
+    from:
+      key_code: z
+    to:
+    - key_code: z
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # Comma
+  - type: basic
+    from:
+      key_code: comma
+    to:
+    - key_code: comma
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # Period
+  - type: basic
+    from:
+      key_code: period
+    to:
+    - key_code: period
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # Slash
+  - type: basic
+    from:
+      key_code: slash
+    to:
+    - key_code: slash
+      repeat: false
+    - set_variable:
+        name: kanchoku_still_typing
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_right_side
+        value: 0
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_final_stroke
+
+  # Semicolon
+  - type: basic
+    from:
+      key_code: semicolon
+    to:
+    - key_code: semicolon
       repeat: false
     - set_variable:
         name: kanchoku_still_typing
