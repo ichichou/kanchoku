@@ -27,59 +27,42 @@ aliases:
     bundle_identifiers:
     - "^com\\.apple\\.loginwindow$"
 
-- conditions: &kanchoku_waiting_for_first_stroke
+- conditions: &waiting_for_first_stroke
   - type: variable_if
     name: kanchoku_mode
     value: 1
   - type: variable_unless
-    name: kanchoku_first_stroke
-    value: 1
-  - type: variable_unless
-    name: kanchoku_second_stroke
+    name: kanchoku_still_typing
     value: 1
   - type: frontmost_application_unless
     bundle_identifiers:
     - "^com\\.apple\\.loginwindow$"
 
-- conditions: &kanchoku_waiting_for_second_stroke
+- conditions: &waiting_for_second_stroke_after_right_side
   - type: variable_if
-    name: kanchoku_mode
+    name: kanchoku_still_typing
     value: 1
   - type: variable_if
-    name: kanchoku_first_stroke
-    value: 1
-  - type: frontmost_application_unless
-    bundle_identifiers:
-    - "^com\\.apple\\.loginwindow$"
-
-- conditions: &kanchoku_waiting_for_second_stroke_from_right_side
-  - type: variable_if
-    name: kanchoku_mode
-    value: 1
-  - type: variable_if
-    name: kanchoku_first_stroke_right_side
+    name: kanchoku_start_from_right_side
     value: 1
   - type: frontmost_application_unless
     bundle_identifiers:
     - "^com\\.apple\\.loginwindow$"
 
-- conditions: &kanchoku_waiting_for_second_stroke_from_left_side
+- conditions: &waiting_for_second_stroke_after_left_side
   - type: variable_if
-    name: kanchoku_mode
+    name: kanchoku_still_typing
     value: 1
   - type: variable_if
-    name: kanchoku_first_stroke_left_side
+    name: kanchoku_start_from_left_side
     value: 1
   - type: frontmost_application_unless
     bundle_identifiers:
     - "^com\\.apple\\.loginwindow$"
 
-- conditions: &kanchoku_waiting_for_third_stroke
+- conditions: &waiting_for_final_stroke
   - type: variable_if
-    name: kanchoku_mode
-    value: 1
-  - type: variable_if
-    name: kanchoku_second_stroke
+    name: kanchoku_still_typing
     value: 1
   - type: frontmost_application_unless
     bundle_identifiers:
@@ -109,16 +92,13 @@ rules:
         name: kanchoku_mode
         value: 0
     - set_variable:
-        name: kanchoku_first_stroke
+        name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_first_stroke_right_side
+        name: kanchoku_start_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_first_stroke_left_side
-        value: 0
-    - set_variable:
-        name: kanchoku_second_stroke
+        name: kanchoku_start_from_left_side
         value: 0
     conditions: *base_state
 
@@ -142,12 +122,12 @@ rules:
     - key_code: j
       repeat: false
     - set_variable:
-        name: kanchoku_first_stroke
+        name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_first_stroke_right_side
+        name: kanchoku_start_from_right_side
         value: 1
-    conditions: *kanchoku_waiting_for_first_stroke
+    conditions: *waiting_for_first_stroke
 
 # ----- 1ストローク目（左側） -----
 
@@ -161,16 +141,18 @@ rules:
     - key_code: f
       repeat: false
     - set_variable:
-        name: kanchoku_first_stroke
+        name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_first_stroke_left_side
+        name: kanchoku_start_from_left_side
         value: 1
-    conditions: *kanchoku_waiting_for_first_stroke
+    conditions: *waiting_for_first_stroke
 
-# ----- 2ストローク目（人下・伸上中下）（右側） -----
+# ----- 2ストローク目（人下・伸上中下） -----
 
-  # M (from right side)
+# Still Typing
+
+  # M
   - type: basic
     from:
       key_code: m
@@ -178,17 +160,16 @@ rules:
     - key_code: m
       repeat: false
     - set_variable:
-        name: kanchoku_second_stroke
-        value: 1
-    - set_variable:
-        name: kanchoku_first_stroke
+        name: kanchoku_start_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_first_stroke_right_side
+        name: kanchoku_start_from_left_side
         value: 0
-    conditions: *kanchoku_waiting_for_second_stroke_from_right_side
+    conditions: *waiting_for_second_stroke_after_right_side
 
-  # M (from left side)
+# Final Stroke
+
+  # M
   - type: basic
     from:
       key_code: m
@@ -196,49 +177,17 @@ rules:
     - key_code: m
       repeat: false
     - set_variable:
-        name: kanchoku_first_stroke
+        name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_first_stroke_left_side
+        name: kanchoku_start_from_right_side
         value: 0
-    conditions: *kanchoku_waiting_for_second_stroke_from_left_side
+    - set_variable:
+        name: kanchoku_start_from_left_side
+        value: 0
+    conditions: *waiting_for_second_stroke_after_left_side
 
-# ----- 2ストローク目（人下・伸上中下）（左側） -----
-
-  # V (from right side)
-  - type: basic
-    from:
-      key_code: v
-    to:
-    - key_code: v
-      repeat: false
-    - set_variable:
-        name: kanchoku_first_stroke
-        value: 0
-    - set_variable:
-        name: kanchoku_first_stroke_right_side
-        value: 0
-    conditions: *kanchoku_waiting_for_second_stroke_from_right_side
-
-  # V (from left side)
-  - type: basic
-    from:
-      key_code: v
-    to:
-    - key_code: v
-      repeat: false
-    - set_variable:
-        name: kanchoku_second_stroke
-        value: 1
-    - set_variable:
-        name: kanchoku_first_stroke
-        value: 0
-    - set_variable:
-        name: kanchoku_first_stroke_left_side
-        value: 0
-    conditions: *kanchoku_waiting_for_second_stroke_from_left_side
-
-# ----- 2ストローク目（それ以外） -----
+# ----- 2ストローク目（それ以外）・3ストローク目 -----
 
   # J
   - type: basic
@@ -248,50 +197,12 @@ rules:
     - key_code: j
       repeat: false
     - set_variable:
-        name: kanchoku_second_stroke
-        value: 1
-    - set_variable:
-        name: kanchoku_first_stroke
+        name: kanchoku_still_typing
         value: 0
-    conditions: *kanchoku_waiting_for_second_stroke
-
-  # F
-  - type: basic
-    from:
-      key_code: f
-    to:
-    - key_code: f
-      repeat: false
     - set_variable:
-        name: kanchoku_second_stroke
-        value: 1
-    - set_variable:
-        name: kanchoku_first_stroke
+        name: kanchoku_start_from_right_side
         value: 0
-    conditions: *kanchoku_waiting_for_second_stroke
-
-# ----- 3ストローク目 -----
-
-  # J
-  - type: basic
-    from:
-      key_code: j
-    to:
-    - key_code: j
-      repeat: false
     - set_variable:
-        name: kanchoku_second_stroke
+        name: kanchoku_start_from_left_side
         value: 0
-    conditions: *kanchoku_waiting_for_third_stroke
-
-  # F
-  - type: basic
-    from:
-      key_code: f
-    to:
-    - key_code: f
-      repeat: false
-    - set_variable:
-        name: kanchoku_second_stroke
-        value: 0
-    conditions: *kanchoku_waiting_for_third_stroke
+    conditions: *waiting_for_final_stroke
