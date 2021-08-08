@@ -63,10 +63,10 @@ aliases:
 # ===== Rules =====
 
 rules:
-- description: "[Kana Input] TUT-code"
+- description: "[Japanese Input] TUT-code"
   manipulators:
 
-# ----- 漢直モードキー（held down） -----
+# ----- 漢直モードキー -----
 
   # Return
   - type: basic
@@ -99,7 +99,7 @@ rules:
     from:
       key_code: g
     to:
-    - key_code: "3"
+    - key_code: backslash
       modifiers: *to_shift_key
     - key_code: g
       repeat: false
@@ -146,36 +146,3 @@ rules:
         name: kanchoku_mode
         value: 1
     conditions: *kanchoku_mode_3
-
-# ----- 漢直モードキー（toggle） -----
-
-  # F16
-  - type: basic
-    from:
-      key_code: f16
-      modifiers: *optional_any
-    to:
-    - set_variable:
-        name: kanchoku_mode
-        value: 1
-    to_delayed_action:
-      to_if_invoked:
-      - set_variable:
-          name: kanchoku_mode
-          value: 0
-      to_if_canceled:
-      - set_variable:
-          name: kanchoku_mode
-          value: 0
-    parameters:
-      basic.to_delayed_action_delay_milliseconds: 5000
-    conditions:
-    - type: input_source_if
-      input_sources:
-      - language: ja
-
-  # F16: 英数入力モードで無効
-  - type: basic
-    from:
-      key_code: f16
-      modifiers: *optional_any
