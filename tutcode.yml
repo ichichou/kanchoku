@@ -43,7 +43,7 @@ aliases:
     name: kanchoku_still_typing
     value: 1
   - type: variable_if
-    name: kanchoku_start_from_right_side
+    name: kanchoku_started_from_right_side
     value: 1
   - type: frontmost_application_unless
     bundle_identifiers:
@@ -54,7 +54,7 @@ aliases:
     name: kanchoku_still_typing
     value: 1
   - type: variable_if
-    name: kanchoku_start_from_left_side
+    name: kanchoku_started_from_left_side
     value: 1
   - type: frontmost_application_unless
     bundle_identifiers:
@@ -95,10 +95,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *base_state
 
@@ -125,7 +125,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -142,7 +142,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -159,7 +159,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -176,7 +176,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -193,7 +193,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -210,7 +210,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -227,7 +227,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -244,7 +244,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -261,7 +261,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -278,7 +278,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -295,7 +295,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -312,7 +312,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -329,7 +329,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -346,7 +346,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -363,7 +363,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -382,7 +382,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -399,7 +399,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -416,7 +416,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -433,7 +433,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -450,7 +450,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -467,7 +467,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -484,7 +484,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -501,7 +501,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -518,7 +518,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -535,7 +535,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -552,7 +552,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -569,7 +569,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -586,7 +586,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -603,7 +603,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -620,7 +620,7 @@ rules:
         name: kanchoku_still_typing
         value: 1
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 1
     conditions: *waiting_for_first_stroke
 
@@ -636,10 +636,10 @@ rules:
     - key_code: m
       repeat: false
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_right_side
 
@@ -651,10 +651,10 @@ rules:
     - key_code: "y"
       repeat: false
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_right_side
 
@@ -666,10 +666,10 @@ rules:
     - key_code: h
       repeat: false
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_right_side
 
@@ -681,10 +681,10 @@ rules:
     - key_code: "n"
       repeat: false
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_right_side
 
@@ -696,10 +696,10 @@ rules:
     - key_code: v
       repeat: false
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_left_side
 
@@ -711,10 +711,10 @@ rules:
     - key_code: t
       repeat: false
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_left_side
 
@@ -726,10 +726,10 @@ rules:
     - key_code: g
       repeat: false
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_left_side
 
@@ -741,10 +741,10 @@ rules:
     - key_code: b
       repeat: false
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_left_side
 
@@ -761,10 +761,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_left_side
 
@@ -779,10 +779,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_left_side
 
@@ -797,10 +797,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_left_side
 
@@ -815,10 +815,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_left_side
 
@@ -833,10 +833,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_right_side
 
@@ -851,10 +851,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_right_side
 
@@ -869,10 +869,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_right_side
 
@@ -887,10 +887,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_second_stroke_after_right_side
 
@@ -907,10 +907,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -925,10 +925,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -943,10 +943,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -961,10 +961,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -979,10 +979,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -997,10 +997,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1015,10 +1015,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1033,10 +1033,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1051,10 +1051,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1069,10 +1069,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1087,10 +1087,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1105,10 +1105,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1123,10 +1123,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1141,10 +1141,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1159,10 +1159,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1177,10 +1177,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1195,10 +1195,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1213,10 +1213,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1231,10 +1231,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1249,10 +1249,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1267,10 +1267,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1285,10 +1285,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1303,10 +1303,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1321,10 +1321,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1339,10 +1339,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1357,10 +1357,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1375,10 +1375,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1393,10 +1393,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1411,10 +1411,10 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
 
@@ -1429,9 +1429,9 @@ rules:
         name: kanchoku_still_typing
         value: 0
     - set_variable:
-        name: kanchoku_start_from_right_side
+        name: kanchoku_started_from_right_side
         value: 0
     - set_variable:
-        name: kanchoku_start_from_left_side
+        name: kanchoku_started_from_left_side
         value: 0
     conditions: *waiting_for_final_stroke
